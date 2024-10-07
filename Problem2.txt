@@ -1,0 +1,20 @@
+def simple_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1): 
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+TASK 1: Identifying Key Operations:
+
+Line 3 is looping i in the range of array
+line 4 is looping j, pretty much finding how many values come after i
+line 5 is comparing if the j value is greater than value of the next item 
+line 6 is sorting the array to make it from least to greatest
+
+TASK 2: Calculating Big O Complexity:
+The Big 0 time complexity ends up being O(n^2). This is because it is a nested for loop which will make the code iterate through the list numerous times.
+
+TASK 3: Efficiency Analysis:
+Some ways to improve the efficiency is to get out of nested loops. If the array is massive, the code will take time looping back and forth.
+Having two different loops gives you a Big O complexity of O(n).

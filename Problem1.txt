@@ -1,0 +1,108 @@
+TASK 1: Message Storage and Retrieval:
+
+Q: Research and analyze data structures for efficient message storage and retrieval.
+
+When choosing data structures for efficient message storage and retrieval, the most suitable options often include hash tables for fast
+lookups based on message identifiers, queues for ordered message processing, and trees (particularly balanced binary trees) 
+for scenarios requiring efficient retrieval based on message attributes or timestamps, depending on the specific access patterns 
+and performance requirements of your system.
+
+Q: Consider factors such as message ordering, search complexity, and storage overhead.
+
+When choosing a data structure for efficient message storage, key factors to consider include retrieval message ordering 
+(FIFO, LIFO, or specific timestamps), search complexity (time taken to find a specific message), and storage overhead 
+(extra memory used to maintain the data structure); with options like linked lists, queues, stacks, trees (including binary search trees), 
+and hash tables each offering unique advantages depending on the specific use case
+
+Q: Evaluate data structures like arrays, linked lists, hash tables, and trees for storing and retrieving messages.
+
+Arrays:
+An array is a linear data structure and it is a collection of items stored at contiguous memory locations. 
+The idea is to store multiple items of the same type together in one place. It allows the processing of a large amount of data in a relatively short period. 
+The first element of the array is indexed by a subscript of 0.
+There are different operations possible in an array, like Searching, Sorting, Inserting, Traversing, Reversing, and Deleting.
+
+Linked Lists:
+A linked list is a linear data structure in which elements are not stored at contiguous memory locations. 
+The elements in a linked list are linked using pointers.
+
+Hash Tables:
+A hash table is a highly efficient data structure that excels at fast key-value lookups, offering near-constant time complexity 
+for operations like insertion, deletion, and retrieval on average, making it ideal for scenarios where quick access to data based on a 
+unique key is crucial; however, its performance can degrade significantly if collisions occur frequently due to a poorly designed hash 
+function or a high load factor.
+
+Trees:
+A tree is a non-linear and hierarchical data structure where the elements are arranged in a tree-like structure. 
+In a tree, the topmost node is called the root node. Each node contains some data, and data can be of any type. 
+It consists of a central node, structural nodes, and sub-nodes which are connected via edges. 
+Different tree data structures allow quicker and easier access to the data as it is a non-linear data structure. 
+A tree has various terminologies like Node, Root, Edge, Height of a tree, Degree of a tree, etc. 
+
+
+TASK 2: Real-Time Updates:
+
+Q: Explore data structures suitable for real-time updates, ensuring that new messages are promptly delivered to users. Investigate 
+techniques such as polling, long-polling, and websockets for real-time communication. Analyze the pros and cons of each approach in terms 
+of scalability, latency, and resource consumption.
+
+WebSockets:
+A full-duplex communication protocol that allows clients and servers to exchange data in real time over a single TCP connection. 
+WebSockets are a good choice for high-demand applications that require low latency and efficient resource utilization. This technique uses 
+persistent connections instead of a continuous HTTP request/response cycle. Websockets reduce latency and bandwidth usage, 
+and they allow for full-duplex communication. They're ideal for real-time applications like multiplayer games, multimedia chat, 
+and notification systems. However, websockets can consume more server resources, especially with multiple concurrent connections.
+
+Long polling:
+A technique that allows the server to keep a client's request open until new data is available or a timeout occurs. 
+Long polling is a good choice when WebSocket support is not available or for applications with less frequent updates. 
+However, long polling can introduce delays and connection management challenges. This technique is an improvement on HTTP request/response 
+polling, but it can introduce latency and limit the number of concurrent connections. Long polling is a half-real-time solution that's good 
+for low-frequency updates and environments with low bandwidth. However, it's less advanced than websockets and requires many hops between 
+servers and devices
+
+Polling:
+A technique where the client repeatedly requests data from the server, similar to refreshing a web page every few seconds. 
+Polling works well when the timeframe for information availability is known.
+
+
+TASK 3:
+
+Q: Evaluate data structures for managing the list of conversations, optimizing the display and retrieval of active conversations. Consider 
+data structures like arrays, linked lists, hash tables, and trees for storing and accessing conversation metadata. Discuss strategies for 
+sorting, filtering, and indexing conversations to improve user experience.
+
+When managing a list of active conversations, a priority queue implemented using a heap data structure is generally considered the 
+most optimal choice, offering efficient retrieval of the most recent or important conversations while also allowing for easy insertion of 
+new conversations as they occur.
+
+
+When storing and accessing conversation metadata, a hash table is generally the most efficient data structure due to its fast lookup 
+capabilities, making it ideal for quickly retrieving information based on a conversation ID or other key attributes; however, depending on 
+the specific needs of your application, you may also consider using arrays for simple, sequential access, linked lists for flexible 
+insertion/deletion, or trees to manage hierarchical relationships within a conversation thread.
+
+Sorting:
+Sorting is the process of arranging a collection of items or data in a specific order, usually based on some defined criteria. 
+It is a fundamental concept in computer science and algorithms, used to bring organization and efficiency to various tasks and applications.
+In simpler terms, sorting takes a jumbled or random set of items and puts them in a particular order. 
+This order can be ascending (from smallest to largest), descending (from largest to smallest), or based on any other predetermined 
+property of the items being sorted. Sorting is often used to make searching, filtering, and analyzing data easier and faster. 
+By arranging items in a specific order, it becomes easier to identify patterns, find specific values or ranges, and perform various 
+operations based on the sorted data.
+
+Filtering:
+An excellent user experience for filtering means that users don’t have to ‘learn how to filter’. In fact, the smoother the filtering 
+interaction, the more cognitive energy they’ll get to spend on identifying their ideal result(s). Let’s not waste their energy on an 
+onerous interaction, let’s help them achieve their goals in the least taxing way possible. Filters and their properties also double as 
+discoverability agents that educate users about the data and what the overall system can offer. When a filtering interaction is well 
+designed and tailored to the type of data at hand, the experience feels intuitive and it allows users to feel in control and less 
+overwhelmed.
+
+Indexing:
+At its core, an index is like a roadmap that helps a database quickly locate specific data entries. Without an index, the database would 
+need to scan every record sequentially, which can be time-consuming and inefficient, especially when dealing with large volumes of data. 
+Indexing strategies are designed to overcome this challenge by creating a logical structure that facilitates rapid data retrieval. 
+These strategies involve identifying specific columns or fields in a database table and creating pointers or references to the 
+corresponding records. These pointers enable the database to locate data more swiftly, as they act as shortcuts to the desired 
+information
